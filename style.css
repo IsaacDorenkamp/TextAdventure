@@ -1,0 +1,100 @@
+div#music-box{
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	width: 80px;
+	height: 80px;
+	border-radius: 75px;
+	background-color: #ccc;
+	border: 2px solid white;
+	transition: background-color .25s ease-in-out, border-color .25s ease-in-out;
+}
+div#music-box:hover{
+	cursor: pointer;
+	background-color: white;
+	border-color: black;
+}
+div#music-box:active{
+	background-color: #43c643;
+}
+img#music-icon{
+	width: 50x;
+	height: 50px;
+	position: absolute;
+	left: 12px;
+	top: 13px;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+div#modal{
+	position: absolute;
+	background-color: rgba(30, 30, 30, .65);
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+	transition: opacity .5s linear;
+}
+div#modal.transparent{
+	opacity: 0;
+}
+div#modal:not(.visible):not(.transparent){
+	visibility: hidden;
+	opacity: 0;
+}
+div.dialog{
+	position: absolute;
+	background-color: white;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	padding: 10px;
+	min-width: 500px;
+	min-height: 225px;
+}
+.closer{
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	float: right;
+	font-weight: bold;
+	color: #777;
+}
+
+/* table styles */
+table{
+	margin: auto;
+}
+td:nth-child(odd){
+	text-align: right;
+}
+
+/* user interface styles */
+.slider{
+	-webkit-appearance: none;
+	appearance: none;
+	height: 10px;
+	min-width: 100px;
+	background-color: #ccc;
+	border-radius: 5px;
+	outline: none;
+}
+.slider::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	background-color: black;
+}
+.slider::-webkit-slider-thumb:hover{
+	cursor: pointer;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TEXT ADVENTURE</title>
+		<link rel="stylesheet" href="iframe.css" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="dialogs.js"></script>
+	</head>
+	<body class="fullscreen">
+		<iframe class="fullscreen" src="adventure/index.html"></iframe>
+		<div id="music-box" onclick="MusicDialog.show()">
+			<img src="music.png" alt="♫" id="music-icon" draggable="false" />
+		</div>
+		<div id="modal">
+			<div class="dialog">
+				Music Control
+				<span class="closer" onclick="MusicDialog.hide()">&times;</span>
+				<hr />
+				<table>
+					<tbody>
+						<tr>
+							<td>Now Playing:</td>
+							<td><select id="music-box"></select></td>
+						</tr>
+						<tr>
+							<td>Volume:</td>
+							<td><input type="range" id="volume-slider" class="slider" /></td>
+						</tr>
+						<tr>
+							<td>Seek:</td>
+							<td><input type="range" id="seeker-slider" class="slider" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
