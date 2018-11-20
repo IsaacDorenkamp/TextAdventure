@@ -1,0 +1,30 @@
+body{
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+h1{
+	margin: 5px auto;
+}
+h1.separate{
+	margin: 20px auto;
+}
+h2{
+	max-width: 40%;
+	margin: 5px auto;
+}
+
+hr.small{
+	max-width: 40%;
+}
+
+a{
+	color: skyblue;
+}
+a:hover{
+	text-decoration: none;
+}
+a:active{
+	color: #ccc;
+}

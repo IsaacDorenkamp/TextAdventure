@@ -5,11 +5,16 @@
 		<link rel="stylesheet" href="iframe.css" />
 		<link rel="stylesheet" href="style.css" />
 		<script src="dialogs.js"></script>
+		<script src="musicbox.js"></script>
+		<script src="frameinit.js"></script>
 	</head>
 	<body class="fullscreen">
-		<iframe class="fullscreen" src="adventure/index.html"></iframe>
-		<div id="music-box" onclick="MusicDialog.show()">
-			<img src="music.png" alt="♫" id="music-icon" draggable="false" />
+		<iframe id="frame" class="fullscreen" src="adventure/index.html"></iframe>
+		<div id="music-box" onclick="MusicDialog.show()" class="icon-box">
+			<img src="music.png" alt="♫" class="icon" draggable="false" />
+		</div>
+		<div id="reload-box" onclick="IFrame.src = IFrame.src" class="icon-box">
+			<img src="reload.png" alt="reload" class="icon" draggable="false" />
 		</div>
 		<div id="modal">
 			<div class="dialog">
@@ -20,15 +25,20 @@
 					<tbody>
 						<tr>
 							<td>Now Playing:</td>
-							<td><select id="music-box"></select></td>
+							<td colspan="2"><select id="play-box"><option value="" selected disabled hidden>Select Music Here</option></select></td>
 						</tr>
 						<tr>
 							<td>Volume:</td>
-							<td><input type="range" id="volume-slider" class="slider" /></td>
+							<td colspan="2"><input type="range" id="volume-slider" class="slider" value="100" /></td>
 						</tr>
 						<tr>
 							<td>Seek:</td>
-							<td><input type="range" id="seeker-slider" class="slider" /></td>
+							<td colspan="2"><input type="range" id="seeker-slider" class="slider" value="0" /></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><img src="play.jpg" alt="play/pause" id="playbutton" /></td>
+							<td></td>
 						</tr>
 					</tbody>
 				</table>
